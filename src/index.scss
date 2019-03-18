@@ -1,0 +1,71 @@
+@import "variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  background: $gray;
+  padding: $big_space $very_big_space;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: $medium_space;
+
+  #canvas-section {
+    margin: $medium_space;
+    padding: $big_space;
+    background: $medium_gray;
+    border: 1px solid $border_color;
+    border-radius: $border_radius;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $big_space;
+
+    .canvas-container {
+      display: grid;
+      grid-template-rows: 50px 1fr;
+      grid-template-columns: 1fr;
+      grid-gap: $small_space;
+
+      .canvas-name {
+        padding: $small_space;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 1px solid $border_color;
+        border-radius: $border_radius;
+        background: $light_gray;
+      }
+
+      .canvas-display {
+        background: $very_light_gray;
+        border: 1px solid $border_color;
+        border-radius: $border_radius;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .canvas-wrapper {
+          text-align: center;
+
+          canvas {
+            background: black;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+body, html {
+  width: 100%;
+  height: 100%; }
+
+#container {
+  width: 100%;
+  height: 100%;
+  background: #c1c1c1;
+  padding: 50px 100px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 25px; }
+  #container #canvas-section {
+    margin: 25px;
+    padding: 50px;
+    background: #d2d2d2;
+    border: 1px solid #858585;
+    border-radius: 4px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px; }
+    #container #canvas-section .canvas-container {
+      display: grid;
+      grid-template-rows: 50px 1fr;
+      grid-template-columns: 1fr;
+      grid-gap: 15px; }
+      #container #canvas-section .canvas-container .canvas-name {
+        padding: 15px;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 1px solid #858585;
+        border-radius: 4px;
+        background: #e8e8e8; }
+      #container #canvas-section .canvas-container .canvas-display {
+        background: #f9f9f9;
+        border: 1px solid #858585;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
+        #container #canvas-section .canvas-container .canvas-display .canvas-wrapper {
+          text-align: center; }
+          #container #canvas-section .canvas-container .canvas-display .canvas-wrapper canvas {
+            background: black; }
